@@ -1,24 +1,35 @@
 {
-    "libraries" : [
-        {
-            "name": "jquery", 
-            "url": "https://code.jquery.com/jquery-3.3.1.min.js", 
-            "version": "3.3.1", 
-            "global": true
-        },
-        {
-            "name": "jquery-ui", 
-            "url": "https://code.jquery.com/ui/1.12.0/jquery-ui.min.js", 
-            "version": "1.12.0", 
-            "global": true
-        }
-    ],
-    "partials" : {
-        "intro" : "partials/intro/",
-        "html" : "partials/html/",
-        "css" : "partials/css/",
-        "js" : "partials/js/"
+  "libraries": [
+    {
+      "name": "react",
+      "url": "https://unpkg.com/react@16/umd/react.development.js",
+      "version": "16",
+      "global": true,
+      "crossorigin": true
     },
-    "showNumSlides": true,
-    "runOnChange": true
+    {
+      "name": "react-dom",
+      "url": "https://unpkg.com/react-dom@16/umd/react-dom.development.js",
+      "version": "16",
+      "global": true,
+      "crossorigin": true
+    },
+    {
+      "name": "babel",
+      "url": "https://unpkg.com/babel-standalone@6/babel.min.js",
+      "version": "6",
+      "global": true,
+      "crossorigin": true
+    }
+  ],
+  "partials": {
+    "page": "partials/pages/",
+    "intro": "partials/intro/",
+    "html": "partials/html/",
+    "css": "partials/css/",
+    "js": "partials/js/"
+  },
+  "babel": true,
+  "showNumSlides": true,
+  "runOnChange": true
 }

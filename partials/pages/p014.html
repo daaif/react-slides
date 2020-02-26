@@ -1,0 +1,33 @@
+<div class="container small">
+  <h2 class="">Gestion de l'état d'un composant</h2>
+  <p>
+    Lorsque le composant est basé sur une classe, <mark>React</mark> utilise
+    <code>this.state</code> pour enregistrer son état. Pour modifier son état,
+    il faut utiliser la méthode <code>setState()</code>
+    à laquelle on passe un objet contenant uniquement la ou les variables qu'on
+    veut modifier.
+
+    <textarea class="myCode">
+  class Todo extends React.Component {
+    construct(props) {
+      super(props); /* Passer les props à la classe mère -> Obligatoire */
+      this.state = {done: props.done}; /* s'exécute une seule fois lors de création du composant. */
+    }
+    handleChange() {
+      this.setState({done: !this.state.done}); /* Permet à React de savoir quelle MAJ doit-il opérer */
+    }
+    render() {
+      return (
+        <div className="todo">
+          <span className="todo-task"> {props.task} </div>
+          <input  className="todo-done" 
+                  onChange={handleChange} 
+                  type="checkbox"
+                  defaultChecked={props.done} />
+        </div>
+      );
+    }
+  }</textarea
+    >
+  </p>
+</div>

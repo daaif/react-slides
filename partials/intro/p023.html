@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>Complétons le composant <code>&lt;AddTodo /&gt;</code></h2>
+  <p>
+    <textarea class="myCode">
+ 
+  function AddTodo(props) {
+    const [task, setTask] = React.useState("");
+    function handleChange(evt){
+        setTask(evt.target.value);
+    }
+    function handleClick(){
+      props.addHandler({task, done: false});
+      setTask("");
+    }
+    return (
+      <div className="todo-add">
+        <input  type="text" defaultValue={task} onchange={handleChange} />
+        <button onClick={handleClick}>+</button>
+      </div>
+    );
+  }</textarea
+    >
+  </p>
+</div>

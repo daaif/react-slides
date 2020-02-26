@@ -1,10 +1,38 @@
-<div class="container-fluid">
-    <h2>JQuery UI <code>Selectable</code></h2>
-    <p>Enable a DOM element (or group of elements) 
-        to be selectable. Draw a box with your cursor to select items. 
-        Hold down the <kbd>Ctrl key</kbd> to make multiple 
-        non-adjacent selections.</p>
-    <p><a href="https://jqueryui.com/selectable/" target="_blank">
-        Source jQueru UI
-    </a></p>
+<div class="container small">
+  <h2>
+    JSX
+    <span class="text-muted">
+      <i class="fas fa-arrow-right"></i> Jvascript XML</span
+    >
+  </h2>
+  <p class="">
+    JSX est une extension ECMAScript utilisée par React. Elle permet la
+    coexistance de texte de type XML / HTML avec le code JavaScript. La syntaxe
+    est destinée à être utilisée par des préprocesseurs (Ex. Babel) pour
+    transformer du texte de type HTML trouvé dans des fichiers JavaScript en
+    objets JavaScript standard qu'un moteur JavaScript analysera.
+  </p>
+
+  <div class="row">
+    <div class="col-md-9 offset-3">
+      <div>
+        <p><mark>Hello Toto</mark> autrement</p>
+        <kbd>HTML</kbd>
+        <textarea class="myCode">  <div id="root"></div></textarea>
+        <kbd>Javascript</kbd>
+        <textarea class="myCode">
+  const name = "toto";
+  const element = <div
+    className="big"
+    style={{ color: "green" }}>  
+    Hello {name} ! 
+  </div>;
+  ReactDOM.render(
+    element,
+    document.getElementById("root")
+  );
+        </textarea>
+      </div>
+    </div>
+  </div>
 </div>

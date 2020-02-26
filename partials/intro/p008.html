@@ -1,0 +1,27 @@
+<div class="container ">
+  <h2>Ajoutons un deuxième attribut <mark>done</mark></h2>
+  <kbd>HTML</kbd><br />
+  <textarea class="myCode"><div id="root"></div></textarea>
+
+  <kbd>Javascript</kbd><br />
+
+  <textarea class="myCode">
+function Todo(props) {
+  const { task, done } = props;
+  return (
+    <div className="todo">
+      <span className="todo-task"> {task} </span>
+      <input
+        className="todo-done"
+        type="checkbox"
+        defaultChecked={done}
+      />
+    </div>
+  );
+}
+ReactDOM.render(
+  <Todo task="Do something" done={true} />,
+  document.getElementById("root")
+);</textarea
+  >
+</div>

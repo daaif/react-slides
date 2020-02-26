@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>Test avec quelques styles</h1>
+  <p>
+    <textarea class="myCode">
+function App() {
+  const initialTodos = [ ... ];
+  const [todos, updateTodos] = React.useState(initialTodos);
+  function appendTodo(todo) {
+    todo["id"] = todos[todos.length - 1] + 1;
+    todos.push(todo);
+    /* Remarquez comment on met à jour en passant un nouveau tableau ! */
+    updateTodos([...todos]);
+  }
+  function updateTodo(todo) {
+    const t = todos.find(t => t.id === todo.id)
+    if (t) {
+      t.done = todo.done;
+      updateTodos([...todos]);
+      console.log(todos);
+    }
+  }
+  return ( ... );
+}</textarea
+    >
+  </p>
+</div>

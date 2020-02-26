@@ -1,0 +1,31 @@
+<div class="container small">
+  <h2 class="">Gestion de l'état d'un composant</h2>
+  <p class="">
+    L'état (State), repsésente des variable accessibles uniquement par le
+    composant lui-même. A chaque fois qu'une de ces variable change,
+    <mark>React</mark> la detecte et se charge de la mise à jour de l'interface.
+  </p>
+  <p>
+    Si le composant est basé sur une fonction, <mark>React</mark> utilise le
+    <mark>Hook d'état</mark> <code>useState()</code> pour maintenir son état.
+  </p>
+  <textarea class="myCode">
+function Todo(props) {
+  const [done, setDone] = React.useState(props.done);
+  function handleChange() {
+    setDone( !done );
+  }
+  return (
+    <div className="todo">
+      <span className="todo-task"> {props.task} </div>
+      <input 
+          className="todo-done" 
+          onChange={handleChange} 
+          type="checkbox"
+          defaultChecked={props.done}
+      />
+    </div>
+  );
+}</textarea
+  >
+</div>

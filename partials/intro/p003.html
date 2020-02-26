@@ -1,0 +1,34 @@
+<div class="container small">
+  <h3>Embarquement de <mark>React</mark> dans une page <mark>HTML</mark></h3>
+  <p>
+    Dans cette présentation, nous embarquons <mark>React</mark> dans la page. Le
+    but étant de montrer les concepts de base qui font de <mark>React</mark> ce
+    qu'il est maintenant.
+  </p>
+  <p>
+    Nous montrerons ensuite, comment configurer l'envirronnement de développment
+    pour prendre en charge le processus de développment, de tests et de
+    déploiement.
+  </p>
+  <h4>Structure des pages de cette présentation :</h4>
+  <textarea class="myCode">
+<html>
+  <head>
+    <script src="https://unpkg.com/react@16/umd/react.development.js">
+    </script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+    </script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js">
+    </script>
+    <!-- On injecte ici le CSS de l'onglet CSS-->
+    <style>/* voir contenu de l'onglet CSS */</style>
+  </head>
+  <body>
+    <!-- On inject ici notre HTML -->
+    <div id="root"></div>
+    <!-- On injecte ici notre JS / JSX et Babel s en occupera -->
+    <script type="text/babel"></script>
+  </body>
+</html></textarea
+  >
+</div>

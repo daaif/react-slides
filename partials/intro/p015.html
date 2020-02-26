@@ -1,0 +1,28 @@
+<div class="container">
+  <h2>Rendu conditionnel</mark></h2>
+  <p>Nous voulons différencier l'affichage des taches réalisées de celles 
+    qui ne le sont pas. </p>
+  <p>Nous allons ajouter au conteneur de la tache à faire (Todo)
+     la classe CSS <mark>done</mark> lorsque celle-ci est réalisée.</p>
+     
+     <textarea class="myCode">
+  function Todo(props) {
+    const [done, setDone] = React.useState(props.done);
+    function handleChange() {
+      setDone( !done );
+    }
+    const classes = done ? "todo done" : "todo"
+    return (
+      <div className={classes}>
+        <span className="todo-task"> {props.task} </div>
+        <input 
+            className="todo-done" 
+            onChange={handleChange} 
+            type="checkbox"
+            defaultChecked={props.done}
+        />
+      </div>
+    );
+  }</textarea
+    >
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+  <h2>Click sur la Todo</h2>
+  <p>
+    <textarea class="myCode">
+  function Todo(props) {
+    const [todo, updateTodo] = React.useState(props.todo);
+    function handleClick() {
+      todo.done = !todo.done;
+      props.updateHandler(todo);
+      updateTodo(todo);
+    }
+    const classes = todo.done ? "todo done" : "todo";
+    return (
+      <div className={classes} onClick={handleClick}>
+        <span className="todo-task"> {props.todo.task} </span>
+        <input className="todo-done"
+          type="checkbox"
+          onChange={() => console.log('changed !!') }
+          checked={props.todo.done}
+        />
+      </div>
+    );
+  }
+  </textarea
+    >
+  </p>
+</div>

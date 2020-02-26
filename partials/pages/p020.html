@@ -1,0 +1,31 @@
+<style>
+  html * {
+    cursor: url(../../images/icon.png), auto !important;
+  }
+</style>
+<div class="container-fluid ">
+  <h2>Le composant <code>&lt;Todo /&gt;</code></h2>
+  <p>
+    <textarea class="myCode">
+function Todo(props) {
+  const [todo, updateTodo] = React.useState(props.todo);
+  function handleChange() {
+    todo.done = !todo.done;
+    /* ici on appelle la fonction définie dans le composant <App /> */
+    props.updateHandler(todo);
+    updateTodo(todo);
+  }
+  const classes = todo.done ? "todo done" : "todo";
+  return (
+    <div className={classes}>
+      <span className="todo-task"> {props.todo.task} </span>
+      <input  className="todo-done" 
+              type="checkbox" 
+              onChange={handleChange}  
+              defaultChecked={props.todo.done} />
+    </div>
+  );
+}</textarea
+    >
+  </p>
+</div>

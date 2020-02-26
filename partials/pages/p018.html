@@ -1,0 +1,34 @@
+<style>
+  html * {
+    cursor: url(../../images/icon.png), auto !important;
+  }
+</style>
+<div class="container ">
+  <h2>Commencons par le composant <code>&lt;App /&gt;</code></h2>
+  <p>
+    Le composant <code>&lt;App /&gt;</code> doit embarquer les données dans son
+    état (State) et va avoir deux enfants <code>&lt;AddTodo /&gt;</code> et
+    <code>&lt;TodoList /&gt;</code>.
+    <textarea class="myCode">
+      function App() {
+        const initialTodos = [ { id: 1, task: "buy a book", done: false }, ...];
+        /* La variable d'état todos et la fonction updateTodos pour mettre à jour les todos */
+        const [todos, updateTodos] = React.useState(initialTodos);
+        function appendTodo(todo) { /* todo : Ajouter une Todo et invoquer updateTodos() */ }
+        function updateTodo(todo) { /* todo : Mettre à jour la Todo et invoquer updateTodos() */}
+        return (
+          <div className="app">
+            <AddTodo addHandler={appendTodo} />
+            <!-- /* On envoie la référence de updateTodo à son enfant TodoList */ -->
+            <TodoList todos={todos} updateHandler={updateTodo} />
+            <TodoStatus todos={todos} />
+          </div>
+        );
+      }</textarea
+    >
+    <span class="text-muted ">
+      Voir les composants &lt;TodoList /&gt; et &lt;Todo /&gt; dans le slide
+      suivant.
+    </sapn>
+  </p>
+</div>

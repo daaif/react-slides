@@ -1,0 +1,24 @@
+<div class="container">
+  <h2 class="">Fixer le problème de la clé</h2>
+  <p>
+    <mark>React</mark> a besoin d'identifier chaque élément de la liste pour
+    pouvoir le mettre à jour individuellement. Pour résoudre ce problème, il
+    suffit de passer à l'élément <code>&lt;Todo /&gt;</code> l'attribut
+    <code>key</code> avec une valeur unique.
+  </p>
+  <textarea class="myCode">
+function TodoList(props) {
+  return (
+    <div className="container">
+      {props.todos.map(
+        todo => <Todo 
+                    key={task.id} 
+                    task={todo.task} 
+                    done={todo.done} 
+                />
+      )}
+    </div>
+  );
+}</textarea
+  >
+</div>

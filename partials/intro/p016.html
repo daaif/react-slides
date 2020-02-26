@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>Rendu conditionnel</mark></h2>
+  <p>Composant à base de classe. </p>
+     <textarea class="myCode">
+  class Todo extends React.Component {
+    state = { done: this.props.done };
+    handleChange = () => {
+      this.setState({ done: !this.state.done });
+    }
+    render() {
+      const { task, done } = this.props;
+      const classes = this.state.done ? "todo done" : "todo";
+      return (
+        <div className={classes}>
+          <span className="todo-task"> {task} </span>
+          <input className="todo-done"
+            type="checkbox"
+            onChange={this.handleChange}
+            defaultChecked={done} />
+        </div>
+      );
+    }
+  }</textarea
+    >
+</div>

@@ -1,0 +1,33 @@
+<style>
+  html * {
+    cursor: url(../../images/icon.png), auto !important;
+  }
+</style>
+<div class="container-fluid">
+  <h2>
+    Les composants <code>&lt;TodoList /&gt;</code> et
+    <code>&lt;Todo /&gt;</code>
+  </h2>
+  <p>
+    Le composant <code>&lt;TodoList /&gt;</code> transmet à son tour la
+    référence à la fonction <code>updateTodo()</code>. Lui, il n'en a pas
+    besoin.
+  </p>
+  <p>
+    <textarea class="myCode">
+  function TodoList(props) {
+    return (
+      <div className="container">
+        {props.todos.map(
+          todo => <Todo 
+                        key={todo.id} 
+                        todo={todo} 
+                        updateHandler={props.updateHandler} 
+                  />
+        )}
+      </div>
+    );
+  }</textarea
+    >
+  </p>
+</div>

@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Complétons le composant <code>&lt;TodoStatus /&gt;</code></h2>
+  <p>
+    Celui-ci affiche le nombre de Todos réalisées par rapport au nombre total de
+    Todos.
+    <textarea class="myCode">
+  function TodoStatus(props) {
+    const doneTodos = props.todos.filter(todo => todo.done).length;
+    const todosLength = props.todos.length; 
+    const status = doneTodos + " of " + todosLength;
+    return (
+      <div className="todo-status">{status}</div>
+    );
+  }</textarea
+    >
+  </p>
+</div>

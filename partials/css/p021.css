@@ -1,0 +1,46 @@
+body {
+  font-size: 1.5em;
+  font-family: arial;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  border: 1px solid gray;
+  justify-items: stretch;
+}
+.todo-add,
+.todo-status {
+  border: 1px dotted gray;
+  border-bottom: none;
+  padding: 12px;
+  text-align: center;
+}
+.todo-status {
+  margin-top: auto;
+  color: gray;
+  font-size: 0.9em;
+}
+.container {
+  border: 1px solid gray;
+  background-color: #fef;
+}
+.todo {
+  display: flex;
+  border: 1px solid gray;
+  padding: 6px;
+  margin: 6px;
+  background-color: rgb(215, 252, 185);
+  align-items: flex-end;
+}
+.todo-task {
+  flex: 1 1 auto;
+}
+.todo-done {
+  flex: 0 1 auto;
+  transform: scale(2);
+}
+.done {
+  text-decoration: line-through;
+  color: #777;
+}

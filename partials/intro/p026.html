@@ -1,0 +1,29 @@
+<div class="container">
+  <h3>Gérer le focus</h3>
+  <p>
+    <textarea class="myCode">
+  function AddTodo(props) {
+    const [task, setTask] = React.useState("");
+    /* Pour pouvoir récupérer la référence de la zone de texte */
+    const taskInputRef = React.useRef(null);
+    /* Agir directement sur le DOM est un effet de bord */
+    React.useEffect(() => {
+      taskInputRef.current.focus();
+    });
+    function handleChange(evt) {  setTask(evt.target.value);  }
+    function handleClick() {
+      if (task.length < 3) return;
+      props.addHandler({ task, done: false });
+      setTask("");
+    }
+    return (
+      <div className="todo-add">
+        <!-- /* Utilisation de l'attribut ref pour initialiser taskInputRef */ -->
+        <input ref={taskInputRef} type="text" value={task} onChange={handleChange} />
+        <button onClick={handleClick}>+</button>
+      </div>
+    );
+  }</textarea
+    >
+  </p>
+</div>

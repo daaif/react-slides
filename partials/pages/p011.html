@@ -1,0 +1,53 @@
+<div class="container-fluid">
+  <h1 class="text-center">
+    Composant <mark>Function</mark> VS Composant <mark>Class</mark>
+  </h1>
+  <br />
+  <div class="row small">
+    <div class="col-md-6">
+      <p class="">
+        Composant créé par une fonction
+      </p>
+      <textarea class="myCode">
+function Todo(props) {
+  return (
+    <div className="todo">
+      <div className="todo-task"> {props.task} </div>
+      <input 
+          className="todo-done" 
+          type="checkbox" 
+          defaultChecked={props.done} 
+      />
+    </div>
+  );
+}</textarea
+      >
+    </div>
+    <div class="col-md-6">
+      <p class="">
+        Le même composant créé par une classe
+      </p>
+      <textarea class="myCode">
+class Todo extends React.Component {
+  render() {
+    return (
+      <div className="todo">
+        <div className="todo-task"> {this.props.task} </div>
+        <input 
+            className="todo-done" 
+            type="checkbox" 
+            defaultChecked={this.props.done} 
+        />
+      </div>
+    );
+  }
+}</textarea
+      >
+    </div>
+  </div>
+  <br />
+  <p class="text-center text-muted">
+    Deux manières différentes pour faire la même chose. <br />
+    A chacun ses préférences !
+  </p>
+</div>

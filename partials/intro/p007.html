@@ -1,0 +1,23 @@
+<div class="container ">
+  <h2>Ajoutons un attribut à <code>&lt;Todo /&gt;</code></h2>
+  <kbd>HTML</kbd><br />
+  <textarea class="myCode"><div id="root"></div></textarea>
+
+  <kbd>Javascript</kbd><br />
+
+  <textarea class="myCode">
+function Todo(props) {
+  return (
+    <h1> {props.task} to do now !</h1>
+  );
+}
+ReactDOM.render(
+  <Todo task="Something" />,
+  document.getElementById("root")
+);</textarea
+  >
+  <p class="small">
+    L'attribut <code>task</code> est passé au <mark>Composant React</mark> à
+    travers l'argument <mark>props</mark>.
+  </p>
+</div>
