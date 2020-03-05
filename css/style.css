@@ -24,7 +24,10 @@ code {
 .page .CodeMirror {
   height: auto;
 }
-.page h1 {
+.page h1,
+.example h1,
+.page h2,
+.example h2 {
   padding-top: 14px;
   text-shadow: 0 0 2px #fff, 0 0 6px #00000099;
   font-variant: small-caps;
@@ -39,4 +42,27 @@ code {
   transform: scale(1.1);
   z-index: 1000;
   transition: 300ms;
+}
+h1,
+h2 {
+  background: url(../images/background.png);
+  background-size: cover;
+}
+.page h1 {
+  font-size: 2.4rem;
+}
+.example h1 {
+  font-size: 2rem;
+}
+.page h2 {
+  font-size: 2.2rem;
+}
+.example h2 {
+  font-size: 1.8rem;
+}
+.page h3 {
+  font-size: 1.8rem;
+}
+.example h3 {
+  font-size: 1.4rem;
 }
