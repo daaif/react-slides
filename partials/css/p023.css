@@ -29,6 +29,7 @@ body {
 }
 .todo-add input {
   flex: 10 1 auto;
+  width: 100%;
 }
 .todo-add button {
   background-color: #ddd;

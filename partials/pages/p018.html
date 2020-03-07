@@ -1,14 +1,9 @@
-<style>
-  html * {
-    cursor: url(../../images/icon.png), auto !important;
-  }
-</style>
 <div class="container ">
-  <h2 class="text-center">Commencons par le composant <code>&lt;App /&gt;</code></h2>
+  <h2 class="text-center">Commençons par le composant <code>&lt;App /&gt;</code></h2>
   <p>
     Le composant <code>&lt;App /&gt;</code> doit embarquer les données dans son
-    état (State) et va avoir deux enfants <code>&lt;AddTodo /&gt;</code> et
-    <code>&lt;TodoList /&gt;</code>.
+    état (State) et va avoir trois enfants <code>&lt;AddTodo /&gt;</code>, 
+    <code>&lt;TodoList /&gt;</code> et <code>&lt;TodoStatus /&gt;</code>.
     <textarea class="myCode">
       function App() {
         const initialTodos = [ { id: 1, task: "buy a book", done: false }, ...];
@@ -26,7 +21,7 @@
         );
       }</textarea
     >
-    <span class="text-muted ">
+    <span class="text-muted small">
       Voir les composants &lt;TodoList /&gt; et &lt;Todo /&gt; dans le slide
       suivant.
     </sapn>

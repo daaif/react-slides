@@ -5,22 +5,20 @@ function App() {
     { id: 3, task: "shopping", done: false },
   ];
   const [todos, updateTodos] = React.useState(initialTodos);
-  function appendTodo(todo) {
-    todo["id"] = todos[todos.length - 1].id + 1;
-    todos.push(todo);
-    updateTodos([...todos]);
+  function prependTodo(todo) {
+    todo["id"] = Math.max(...todos.map(t => t.id)) + 1;
+    updateTodos([todo, ...todos]);
   }
   function updateTodo(todo) {
     const t = todos.find(t => t.id === todo.id)
     if (t) {
       t.done = todo.done;
       updateTodos([...todos]);
-      console.log(todos);
     }
   }
   return (
     <div className="app">
-      <AddTodo addHandler={appendTodo} />
+      <AddTodo addHandler={prependTodo} />
       <TodoList todos={todos} updateHandler={updateTodo} />
       <TodoStatus todos={todos} />
     </div>

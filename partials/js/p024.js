@@ -7,20 +7,17 @@ function App() {
   const [todos, updateTodos] = React.useState(initialTodos);
   function prependTodo(todo) {
     todo["id"] = Math.max(...todos.map(t => t.id)) + 1;
-    todos.unshift(todo);
-    updateTodos([...todos]);
+    updateTodos([todo, ...todos]);
   }
   function sort(todos) {
     return todos.sort((t1, t2) => {
-      return (t1.done === t2.done) ? ((t1.id > t2.id) ? 1 : -1) : t1.done ? 1 : -1;
+      return (t1.done === t2.done) ? ((t1.id > t2.id) ? -1 : 1) : t1.done ? 1 : -1;
     })
   }
   function updateTodo(todo) {
     const t = todos.find(t => t.id === todo.id)
     if (t) {
       t.done = todo.done;
-      sort(todos);
-      console.log(todos);
       updateTodos([...todos]);
     }
   }
