@@ -13,7 +13,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "ws": "^7.0.0"
+    "ws": "^7.4.6"
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
